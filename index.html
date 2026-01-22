@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Daily Wellness Tracker</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Wellness Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="app">
-    <h2>🌱 Daily Wellness Tracker</h2>
+  <h2>🌱 Daily Wellness</h2>
 
-    <!-- Mood -->
-    <p>How are you feeling?</p>
-    <div class="moods">
-        <button onclick="setMood('😊')">😊</button>
-        <button onclick="setMood('😐')">😐</button>
-        <button onclick="setMood('😞')">😞</button>
-        <button onclick="setMood('😡')">😡</button>
-    </div>
-    <p id="mood">Mood: —</p>
+  <div class="stats">
+    <p id="dashMood">Mood: —</p>
+    <p id="dashTime">Focus: 0 min</p>
+    <p id="dashHabits">Habits: 0%</p>
+  </div>
 
-    <!-- Timer -->
-    <h3>⏱ Focus Time</h3>
-    <p id="time">00:00</p>
-    <button onclick="start()">Start</button>
-    <button onclick="stop()">Stop</button>
-    <p id="total">Today: 0 min</p>
+  <a class="card" href="mood.html">🌈 Mood Tracker</a>
+  <a class="card" href="habits.html">✅ Habit Tracker</a>
+  <a class="card" href="time.html">⏱ Focus Timer</a>
 
-    <!-- Habits -->
-    <h3>✅ Habits</h3>
-    <input id="habitInput" placeholder="New habit">
-    <button onclick="addHabit()">Add</button>
-
-    <ul id="habitList"></ul>
-    <p id="progress">0% completed</p>
+  <button onclick="toggleTheme()">🌙</button>
 </div>
 
 <script src="script.js"></script>
