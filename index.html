@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Wellness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <h2>🌱 Daily Wellness Tracker</h2>
+
+    <!-- Mood -->
+    <p>How are you feeling?</p>
+    <div class="moods">
+        <button onclick="setMood('😊')">😊</button>
+        <button onclick="setMood('😐')">😐</button>
+        <button onclick="setMood('😞')">😞</button>
+        <button onclick="setMood('😡')">😡</button>
+    </div>
+    <p id="mood">Mood: —</p>
+
+    <!-- Timer -->
+    <h3>⏱ Focus Time</h3>
+    <p id="time">00:00</p>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <p id="total">Today: 0 min</p>
+
+    <!-- Habits -->
+    <h3>✅ Habits</h3>
+    <input id="habitInput" placeholder="New habit">
+    <button onclick="addHabit()">Add</button>
+
+    <ul id="habitList"></ul>
+    <p id="progress">0% completed</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
