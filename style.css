@@ -1,53 +1,91 @@
 body {
-    background: #f4f7fb;
-    font-family: Arial;
+  background: linear-gradient(135deg, #eef2ff, #fdfbfb);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .app {
-    width: 350px;
-    margin: 30px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
+  width: 340px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  padding: 22px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  display: block;
+  margin: 12px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, #5c7cfa, #748ffc);
+  color: white;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(92,124,250,0.4);
 }
 
 .moods button {
-    font-size: 22px;
-    margin: 5px;
-    border: none;
-    background: #eee;
-    padding: 8px;
-    border-radius: 50%;
+  font-size: 26px;
+  margin: 6px;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  background: #f1f3f5;
+  transition: 0.2s;
 }
 
-#time {
-    font-size: 28px;
-    margin: 5px 0;
-}
-
-input {
-    padding: 6px;
-    width: 65%;
-}
-
-button {
-    padding: 6px 10px;
-    margin: 5px;
-    border: none;
-    background: #5c7cfa;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
+.moods button:hover {
+  transform: scale(1.2);
 }
 
 li {
-    list-style: none;
-    padding: 6px;
-    cursor: pointer;
+  list-style: none;
+  background: #f8f9fa;
+  padding: 10px;
+  margin: 6px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.done {
-    text-decoration: line-through;
-    color: gray;
+li.done {
+  background: #d3f9d8;
+  text-decoration: line-through;
+  animation: pop 0.3s;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.timer-running {
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.dark {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  color: white;
+}
+
+.dark .app {
+  background: rgba(30,30,50,0.9);
 }
